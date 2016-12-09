@@ -267,8 +267,12 @@
                                  @endforeach
                        </table>
 
+                       <ul class="pagination">
+                         {{ $product->links() }}
+                       </ul>
 
                     </div>
+
 
 
                     </div>

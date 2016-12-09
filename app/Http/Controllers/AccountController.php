@@ -149,7 +149,7 @@ class AccountController extends Controller
       $user = DB::table('users')->where('email', $email)->first();
       $store = DB::table('store')->where('author', $user->id)->first();
 
-      $product = DB::table('product')->where('owner', $user->id)->orderBy('id', 'dsc')->get();
+      $product = DB::table('product')->where('owner', $user->id)->orderBy('id', 'dsc')->paginate(10);
       return view('account/product/product', compact('product', 'user'));
     }
 
@@ -335,6 +335,7 @@ class AccountController extends Controller
       if ($request->input('seller_name') && $request->input('store') && $request->input('email') && $request->input('password') ) {
 
       try{
+
         $user_id = DB::table('users')->insertGetId([
          'name' => $request->input('seller_name'),
          'email' => $request->input('email'),

@@ -16,7 +16,7 @@ class PortalController extends Controller
       $auth = DB::table('store')->where('owner', $user->id)->first();
     }
     $category = DB::table('category')->orderBy('id', 'dsc')->get();
-    $product = DB::table('product')->orderBy('id', 'dsc')->get();
+    $product = DB::table('product')->orderBy('id', 'dsc')->paginate(10);
     $product_popular = DB::table('product')->orderBy('viewer', 'dsc')->get();
     return view('portal/home/index', compact('category', 'product', 'product_popular', 'auth', 'user'));
   }
@@ -60,7 +60,7 @@ class PortalController extends Controller
     }
     $category = DB::table('category')->orderBy('id', 'dsc')->get();
     $selected_category = DB::table('category')->where('slug_url', $slug_url)->first();
-    $product = DB::table('product')->where('category', $selected_category->id)->get();
+    $product = DB::table('product')->where('category', $selected_category->id)->paginate(10);
     $product_popular = DB::table('product')->orderBy('viewer', 'dsc')->get();
     return view('portal/category/category', compact('category', 'product', 'product_popular', 'selected_category', 'auth', 'user'));
   }
