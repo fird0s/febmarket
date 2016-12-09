@@ -344,10 +344,6 @@ class AccountController extends Controller
          'created_at' => date('Y-m-d'),
          'updated_at' => date('Y-m-d'),
         ]);
-      } catch(\Illuminate\Database\QueryException $ex){
-        $request->session()->flash('error', 'Email sudah ada yang gunakan');
-        return redirect()->route('register');
-      }
 
         $id = DB::table('store')->insertGetId([
          'author' => $user_id,
@@ -378,6 +374,13 @@ class AccountController extends Controller
          'created_at' => date('Y-m-d'),
          'updated_at' => date('Y-m-d'),
         ]);
+
+      } catch(\Illuminate\Database\QueryException $ex){
+        $request->session()->flash('error', 'Email atau nama kedai ada yang gunakan');
+        return redirect()->route('register');
+      }
+
+
 
 
         $request->session()->flash('success', 'Anda berhasil mendaftar, mohon verifikasi malalui email Anda');
