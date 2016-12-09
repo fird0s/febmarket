@@ -1,0 +1,150 @@
+
+/*YOUR CUSTOM STYLES*/
+
+
+@media (max-width: 768px) { 
+  .header-features {
+    display: none !important;
+  }
+  .sidebar-box {
+    display: none;
+  }
+
+  .image_account {
+    display: none;
+  }
+
+  .viewer_account {
+    display: none;
+  }
+
+  .header-author {
+    display: none;
+  }
+
+  .fotorama {
+    margin-bottom: 11px;
+    margin-top: -40px;
+  }
+}
+
+
+/*PRODUCT SHARE ON DISPLAY_PRODUCT FUNCTION*/
+
+.product-share {
+  margin-top: -10px;  
+}
+
+.product-share li{
+  display: inline-block;
+  
+}
+
+.product-share li:hover {
+  cursor: pointer
+}
+
+.product-share > li .fa {
+  color: white;
+  background: #2a8fbd;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  /*-webkit-border-radius: 50%; */*/
+  /*border-radius: 50%;*/
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product-share > li .fa:hover {
+  background: #227297;
+  cursor: 
+}
+
+/*DISPLAY AUTHOR LINKS*/
+.display-author-links {
+  margin-top: 20px;
+}
+
+.display-author-links ul {
+  list-style: none;
+}
+
+.display-author-links ul li{
+}
+
+
+/*FOTORAMA COSTUM*/
+
+.fotorama__stage {
+  background: white;
+  border-radius: 5px;
+  /*max-height:430px;
+  min-height:400px;*/
+}
+
+
+
+/* AUTHOR */
+
+.header-author img{
+  border-radius: 2px;
+}
+
+.header-author {
+
+}
+
+
+
+/* SLIDE FOR SHOPPING CART EDIT */
+
+
+#edit-shopping-cart-owl .item{
+  margin: 3px;
+}
+#edit-shopping-cart-owl .item img{
+  display: block;
+  width: 100%;
+  margin: 10px;
+  height: auto;
+}
+
+.sidebar-left {
+  margin-right: 0px;
+}
+
+/* in add-product.html - to make full width input*/
+.bootstrap-tagsinput{
+  display: block;
+  }
+
+.images{
+	width: 50px;
+	border-radius: 5px;
+	max-height: 40px;
+}
+
+
+
+#owl_edit_product .item{
+  margin: 3px;
+}
+
+#owl_edit_product .item img{
+  display: block;
+  height: auto;
+  padding: 12px !important;
+}
+
+#owl_edit_product .item img:hover{
+	cursor: zoom-in;
+}
+
+.logo {
+  margin-left: -14px;
+}
