@@ -345,6 +345,9 @@
                     @endforeach
 
                     <!-- pagination -->
+                    <ul class="pagination">
+                      {{ $product->links() }}
+                    </ul>
 
                 </div>
             </div>
